@@ -1,0 +1,13 @@
+RUN	simulations.CsvFeeder		csvfeeder	1544270309870	 	2.0
+USER	Video Game DB	1	START	1544270312317	1544270312317
+REQUEST	Video Game DB	1		Get specific Video Game	1544270312354	1544270312417	KO	Check validator resolution crashed: No attribute named 'GameName' is defined
+REQUEST	Video Game DB	1		Get specific Video Game	1544270313442	1544270313455	KO	Check validator resolution crashed: No attribute named 'GameName' is defined
+REQUEST	Video Game DB	1		Get specific Video Game	1544270314452	1544270314462	KO	Check validator resolution crashed: No attribute named 'GameName' is defined
+REQUEST	Video Game DB	1		Get specific Video Game	1544270315463	1544270315470	KO	Check validator resolution crashed: No attribute named 'GameName' is defined
+REQUEST	Video Game DB	1		Get specific Video Game	1544270316482	1544270316492	KO	Check validator resolution crashed: No attribute named 'GameName' is defined
+REQUEST	Video Game DB	1		Get specific Video Game	1544270317482	1544270317491	KO	Check validator resolution crashed: No attribute named 'GameName' is defined
+REQUEST	Video Game DB	1		Get specific Video Game	1544270318502	1544270318512	KO	Check validator resolution crashed: No attribute named 'GameName' is defined
+REQUEST	Video Game DB	1		Get specific Video Game	1544270319513	1544270319523	KO	Check validator resolution crashed: No attribute named 'GameName' is defined
+REQUEST	Video Game DB	1		Get specific Video Game	1544270320522	1544270320533	KO	Check validator resolution crashed: No attribute named 'GameName' is defined
+REQUEST	Video Game DB	1		Get specific Video Game	1544270321532	1544270321541	KO	Check validator resolution crashed: No attribute named 'GameName' is defined
+USER	Video Game DB	1	END	1544270312317	1544270322545

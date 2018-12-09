@@ -1,0 +1,6 @@
+RUN	simulations.CheckResponseBodyAndExtract		checkresponsebodyandextract	1544130211774	 	2.0
+USER	Video Game DB	1	START	1544130212972	1544130212972
+REQUEST	Video Game DB	1		Get Specific Game	1544130212993	1544130213000	OK	 
+REQUEST	Video Game DB	1		Get All Video Games	1544130213073	1544130213083	OK	 
+REQUEST	Video Game DB	1		Get specific game - 2nd call with parameter	1544130213102	1544130213107	KO	jsonPath($.name).find.is(Gran Turismo 3), but actually found nothing
+USER	Video Game DB	1	END	1544130212972	1544130213115

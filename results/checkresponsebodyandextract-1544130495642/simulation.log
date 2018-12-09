@@ -1,0 +1,6 @@
+RUN	simulations.CheckResponseBodyAndExtract		checkresponsebodyandextract	1544130495642	 	2.0
+USER	Video Game DB	1	START	1544130497049	1544130497049
+REQUEST	Video Game DB	1		Get Specific Game	1544130497071	1544130497082	OK	 
+REQUEST	Video Game DB	1		Get All Video Games	1544130497160	1544130497166	OK	 
+REQUEST	Video Game DB	1		Get specific game - 2nd call with parameter	1544130497188	1544130497192	OK	 
+USER	Video Game DB	1	END	1544130497049	1544130497194

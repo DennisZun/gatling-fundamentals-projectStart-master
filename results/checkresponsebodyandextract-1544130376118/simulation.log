@@ -1,0 +1,6 @@
+RUN	simulations.CheckResponseBodyAndExtract		checkresponsebodyandextract	1544130376118	 	2.0
+USER	Video Game DB	1	START	1544130377605	1544130377605
+REQUEST	Video Game DB	1		Get Specific Game	1544130377629	1544130377639	OK	 
+REQUEST	Video Game DB	1		Get All Video Games	1544130377722	1544130377727	OK	 
+GROUP	Failed to build request Get specific game - 2nd call with parameter: No attribute named 'gameId4' is defined 	1544130377749
+USER	Video Game DB	1	END	1544130377605	1544130377753
