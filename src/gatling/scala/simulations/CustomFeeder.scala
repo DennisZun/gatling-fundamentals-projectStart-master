@@ -34,4 +34,29 @@ class CustomFeeder extends BaseSimulation {
     "rating" -> ("Rating" + randomString(4))
   ))
 
+  def postNewGame() = {
+    repeat(5) {
+      feed(customFeeder)
+        .exec(http("Post New Game")
+        .post("videogames/")
+        .body(StringBody(
+          "{" +
+          "\n\t\"id\": ${gameId}," +
+            "\n\t\"name\": \"${name}\"," +
+            "\n\t\"releaseDate\": \"${releaseDate}\"," +
+            "\n\t\"reviewScore\": ${reviewScore}," +
+            "\n\t\"category\": \"${category}\"," +
+            "\n\t\"rating\": \"${rating}\",")
+        ).asJSON
+            .check(status.is(200)))
+        .pause(1)
+    }
+  }
+
+  val scn = scenario("Video Game DB")
+    .exec(postNewGame())
+
+  setUP(scn.inject(atOnceUsers(1))
+  ).protocols(httpConf)
+
 }
