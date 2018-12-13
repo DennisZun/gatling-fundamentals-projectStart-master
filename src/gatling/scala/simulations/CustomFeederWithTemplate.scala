@@ -3,13 +3,13 @@ package simulations
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
+import baseConfig.BaseSimulation
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import baseConfig.BaseSimulation
 
 import scala.util.Random
 
-class CustomFeeder extends BaseSimulation {
+class CustomFeederWithTemplate extends BaseSimulation {
 
   var idNumbers = (11 to 20).iterator
   val rnd = new Random()
@@ -39,15 +39,7 @@ class CustomFeeder extends BaseSimulation {
       feed(customFeeder)
         .exec(http("Post New Game")
           .post("videogames/")
-          .body(StringBody(
-            "{" +
-              "\n\t\"id\": ${gameId}," +
-              "\n\t\"name\": \"${name}\"," +
-              "\n\t\"releaseDate\": \"${releaseDate}\"," +
-              "\n\t\"reviewScore\": ${reviewScore}," +
-              "\n\t\"category\": \"${category}\"," +
-              "\n\t\"rating\": \"${rating}\"\n}")
-          ).asJSON
+          .body(ElFileBody("NewGameTemplate.json")).asJSON
           .check(status.is(200)))
         .pause(1)
     }
