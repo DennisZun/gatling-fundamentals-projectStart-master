@@ -3,6 +3,6 @@
   "name": "${name}",
   "releaseDate": "${releaseDate}",
   "reviewScore": ${reviewScore},
-  "category": "${category{",
+  "category": "${category}",
   "rating": "${rating}"
 }
