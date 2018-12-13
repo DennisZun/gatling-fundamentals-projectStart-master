@@ -1,5 +1,10 @@
 package simulations
 
+//aantekening 13 december 2018 ; dennis van zundert
+//in de Udemy cursus werd deze .scala file niet gemaakt, maar werd een aanapssing gedaan in CustomFeeder.scala,
+//maar ik wilde die file ook behouden om eventueel later op terug te kunnen vallen,
+//daarom deze gemaakt
+
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
