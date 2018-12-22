@@ -6,7 +6,7 @@ object MyGatlingRunner {
 
   def main(args: Array[String]): Unit = {
 
-    val simClass = classOf[CustomFeederWithTemplate].getName
+    val simClass = classOf[BasicLoadSimulation].getName
 
     val props = new GatlingPropertiesBuilder
     props.simulationClass(simClass)
