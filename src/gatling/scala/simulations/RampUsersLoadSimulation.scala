@@ -7,7 +7,7 @@ import io.gatling.http.Predef._
 import scala.concurrent.duration.DurationInt
 
 
-class BasicLoadSimulation extends BaseSimulation{
+class RampUsersLoadSimulation extends BaseSimulation{
 
   def getAllVideoGames() = {
     exec(
@@ -37,10 +37,13 @@ class BasicLoadSimulation extends BaseSimulation{
   setUp(
     scn.inject(
       nothingFor(5 seconds),
-      atOnceUsers(5),
-      nothingFor(5 seconds),
-      rampUsers(10) over (10)
+//      constantUsersPerSec(5) during(10) // 10 seconden lang elke seconde 5 nieuwe users
+      rampUsersPerSec(1) to (5) during (20) // verdeeld over 20 secodenden van 1 naar 5 nwe users / sec. (8e sec. 2; 9e sec.3)
          ).protocols(httpConf.inferHtmlResources())
   )
+
+//  setUp(
+//    scn.inject(atOnceUsers(1))
+//  ).protocols(httpConf)
 
 }
